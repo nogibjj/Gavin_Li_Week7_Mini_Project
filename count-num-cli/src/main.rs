@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-use clap::Parser
+use clap::Parser;
 
 fn logic(numbers: Vec<i32>) -> Vec<(i32, u32)> {
     let mut frequencies = HashMap::new();
@@ -18,14 +18,28 @@ fn logic(numbers: Vec<i32>) -> Vec<(i32, u32)> {
     result
 }
 
-// cli tool
+/// cli tool
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
-struct Args
+struct Args {
+    ///
+    #[arg(short, long)]
+    default: bool,
+
+    #[arg(short,long,default_value="None")]
+    cust_list: String,
+}
 
 fn main() {
     let defualt_nums = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 3];
-    let args: Args = Args::parse
-    
+    let args = Args::parse();
+    if args.default {
+        let result = logic(defualt_nums);
+        println!("The count of each number is {:?}", result);
+    } else {
+        println!("haha");
+    }
+    // let result = logic(defualt_nums);
+    // println!("{:?}", result)
 
 }
