@@ -30,6 +30,14 @@ struct Args {
     cust_list: String,
 }
 
+fn string_to_list(string: String) -> Vec<i32> {
+    let numbers: Vec<i32> = string.split(',')
+                                  .filter_map(|n| n.parse().ok())
+                                  .collect();
+    println!("{:?}", numbers);
+    numbers
+}
+
 fn main() {
     let defualt_nums = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 3];
     let args = Args::parse();
@@ -37,9 +45,14 @@ fn main() {
         let result = logic(defualt_nums);
         println!("The count of each number is {:?}", result);
     } else {
-        println!("haha");
+        if args.cust_list == "None" {
+            println!("Please use default list, or use --cust_list flag to input customized list");
+        } else {
+            // deal with the string list
+            println!("The count of each number is {:?}",
+                     logic(string_to_list(args.cust_list)));
+        }
     }
-    // let result = logic(defualt_nums);
-    // println!("{:?}", result)
+
 
 }
