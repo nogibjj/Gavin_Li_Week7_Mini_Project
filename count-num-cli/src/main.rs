@@ -53,6 +53,4 @@ fn main() {
                      logic(string_to_list(args.cust_list)));
         }
     }
-
-
 }
