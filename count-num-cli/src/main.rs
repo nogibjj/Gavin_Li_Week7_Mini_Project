@@ -46,7 +46,7 @@ fn main() {
         println!("The count of each number is {:?}", result);
     } else {
         if args.cust_list == "None" {
-            println!("Please use default list, or use --cust_list flag to input customized list");
+            println!("Please use default list, or use --cust-list flag to input customized list");
         } else {
             // deal with the string list
             println!("The count of each number is {:?}",
