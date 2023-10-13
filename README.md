@@ -17,13 +17,21 @@ The purpose of this project is to build a rust command line tool as part of the 
 
 ## Guideline for my command line tool
 
+The general purpose of my cli tool is to count the occurance of elements in a list (which is helpful for NLP class🤨).
 
+There are two flags provided to use the tool.
 
+1. `--default`
+
+- counts the occurance of integers in a default list.
+
+2. `--cust-list`
+
+- counts the occurance of integers in a user customized list.
+- if there is a `--default` flag, `--cust-list` will be ignored.
+- if there is only a `cust-list` flag, an input list will be required.
+- if the user input contains characters other than integer and comma, only the valid part will be parsed to integers and counted.
 
 ## References
 
-* [Rust Collections](https://doc.rust-lang.org/std/collections/index.html)
-* [GitHub Copilot CLI](https://www.npmjs.com/package/@githubnext/github-copilot-cli)
-* [Rust Fundamentals](https://github.com/alfredodeza/rust-fundamentals)
-* [Rust Tutorial](https://nogibjj.github.io/rust-tutorial/)
-* [Rust MLOps Template](https://github.com/nogibjj/mlops-template)
+* [Professor Noah's rust data engineering repo](https://github.com/nogibjj/rust-data-engineering)
