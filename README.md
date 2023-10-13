@@ -1,31 +1,23 @@
-[![Clippy](https://github.com/nogibjj/rust-data-engineering/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/rust-data-engineering/actions/workflows/lint.yml)
-[![Tests](https://github.com/nogibjj/rust-data-engineering/actions/workflows/tests.yml/badge.svg)](https://github.com/nogibjj/rust-data-engineering/actions/workflows/tests.yml)
+[![Clippy](https://github.com/nogibjj/Gavin_Li_Week7_Mini_Project/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/Gavin_Li_Week7_Mini_Project/actions/workflows/lint.yml)
+[![Tests](https://github.com/nogibjj/Gavin_Li_Week7_Mini_Project/actions/workflows/tests.yml/badge.svg)](https://github.com/nogibjj/Gavin_Li_Week7_Mini_Project/actions/workflows/tests.yml)
 
 # IDS 706 Data Engineering Week 7 Mini Project
 
 Gavin Li `gl183`
 
-### Technical Notes
+## Purpose of the project
 
-## Makefile
+The purpose of this project is to build a rust command line tool as part of the rust lab.
 
-Each subdirectory project uses this style to make it easy to test and run
+## Result for `make format`, `make lint`, `make test`
 
-```
-format:
-	cargo fmt --quiet
+- Little bit different from make commands for python projects, for this project, go to the `count-num-cli` folder using `cd` command, then call make commands to work solely on this one project.
 
-lint:
-	cargo clippy --quiet
+![make_rslt](./resources/make_rslts.png)
 
-test:
-	cargo test --quiet
+## Guideline for my command line tool
 
-run:
-	cargo run 
 
-all: format lint test run
-```
 
 
 ## References
