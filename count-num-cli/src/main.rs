@@ -14,7 +14,6 @@ struct Args {
     cust_list: String,
 }
 
-
 fn main() {
     let defualt_nums = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 3];
     let args = Args::parse();
@@ -23,17 +22,14 @@ fn main() {
         println!("The count of each number is {:?}", result);
         // return result;
     } else if args.cust_list == "None" {
-            println!(
+        println!(
                 "Please use --default flat to count numbers in the default list, or use --cust-list flag to input customized list"
             );
-            // return None;
+        // return None;
     } else {
         // deal with the string list
         let result = logic(string_to_list(args.cust_list));
-        println!(
-            "The count of each number is {:?}",
-            result
-        );
+        println!("The count of each number is {:?}", result);
         // return result;
     }
 }

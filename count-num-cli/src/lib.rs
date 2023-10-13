@@ -14,9 +14,7 @@ pub fn logic(numbers: Vec<i32>) -> Vec<(i32, u32)> {
 }
 
 pub fn string_to_list(string: String) -> Vec<i32> {
-    let numbers: Vec<i32> = string.split(',')
-                                  .filter_map(|n| n.parse().ok())
-                                  .collect();
+    let numbers: Vec<i32> = string.split(',').filter_map(|n| n.parse().ok()).collect();
     println!("{:?}", numbers);
     numbers
 }
